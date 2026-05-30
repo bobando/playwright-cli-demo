@@ -83,19 +83,10 @@ playwright-cli close
 Agent-oriented documentation lives under:
 
 - `.cursor/skills/playwright-cli/` — Cursor agent skill and reference docs
-- `.claude/skills/playwright-cli/` — Claude Code skill (mirrored content)
-
-For batch automation, `scripts/todomvc-failing-scenarios.js` can be run with:
-
-```bash
-playwright-cli run-code --filename=scripts/todomvc-failing-scenarios.js
-```
-
-That script exercises intentional failing assertions and saves screenshots under `screenshots/todomvc/`.
 
 ## Screenshots
 
-Exploratory CLI runs can save PNGs to `screenshots/todomvc/` (pass and fail scenarios). That directory is listed in `.gitignore`; generate them locally with `playwright-cli screenshot` or the script above. A results manifest may be written to `screenshots/todomvc/TEST-RESULTS.json` when using the failing-scenarios script.
+Exploratory CLI runs can save PNGs to `screenshots/todomvc/` (pass and fail scenarios). That directory is listed in `.gitignore`; generate them locally with `playwright-cli screenshot`.
 
 ## Project layout
 
@@ -107,8 +98,6 @@ Exploratory CLI runs can save PNGs to `screenshots/todomvc/` (pass and fail scen
 ├── e2e/
 │   └── todomvc.spec.js                # TodoMVC add/remove test
 ├── playwright.config.js               # Playwright Test configuration
-├── scripts/
-│   └── todomvc-failing-scenarios.js   # CLI script for demo failure scenarios
 └── screenshots/                     # Local screenshots (gitignored)
 ```
 
